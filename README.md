@@ -11,5 +11,7 @@ System do obsługi biblioteki miejskiej
     7. *wyslanie maila z powiadomieniem o zblizajacym sie terminie oddania
        
 
-Dodać ID książki jako PK
-Dodać pole boolean czy ksiazka jest dostepna
+apps:
+1.books - models: book, category, author
+2.clients - models: client, address, rental, book_proposal
+3.libraries - models: library, librarian(user)
