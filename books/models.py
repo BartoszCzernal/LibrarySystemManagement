@@ -38,6 +38,10 @@ class Book(models.Model):
     def __str__(self):
         return '{} - {}'.format(self.title, self.date_of_release)
 
+    def authors_names(self):
+        return ', '.join([str(author.first_name) + ' ' + str(author.last_name) for author in self.authors.all()])
+
+
 
 
 
