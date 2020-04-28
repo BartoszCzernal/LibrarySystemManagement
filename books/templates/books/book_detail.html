@@ -4,4 +4,6 @@
 <p>{{ book.isbn }} - {{ book.title }}</p>
 <p>{{ book.date_of_release }}</p>
 <p>{{ book.authors_names }}</p>
+<a class="btn btn-outline-secondary" href="{% url 'book-update' book.id %}">Update</a>
+<a class="btn btn-outline-danger" href="{% url 'book-delete' book.id %}">Delete</a>
 {% endblock content %}

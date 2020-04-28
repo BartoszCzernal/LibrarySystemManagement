@@ -1,5 +1,6 @@
 from django.db import models
 from isbn_field import ISBNField
+from django.urls import reverse
 
 
 class Author(models.Model):
@@ -40,6 +41,9 @@ class Book(models.Model):
 
     def authors_names(self):
         return ', '.join([str(author.first_name) + ' ' + str(author.last_name) for author in self.authors.all()])
+
+    def get_absolute_url(self):
+        return reverse('book-detail', kwargs={'pk': self.pk})
 
 
 
