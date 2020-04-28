@@ -12,13 +12,13 @@
       </thead>
       <tbody>
     {% for book in books %}
-        <tr>
-            <th scope="row">{{ book.id }}</th>
-            <td>{{ book.isbn }}</td>
-            <td>{{ book.title }}</td>
-            <td>{{ book.date_of_release }}</td>
-            <td>{{ book.authors_names }}</td>
-        </tr>
+            <tr class="clickable-row" data-href="{% url 'book-detail' book.id %}">
+                <th scope="row">{{ book.id }}</th>
+                <td>{{ book.isbn }}</td>
+                <td>{{ book.title }}</td>
+                <td>{{ book.date_of_release }}</td>
+                <td>{{ book.authors_names }}</td>
+            </tr>
     {% endfor %}
      </tbody>
     </table>
