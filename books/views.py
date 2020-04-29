@@ -2,6 +2,7 @@ from django.shortcuts import render
 from .models import Book
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin
+from .forms import BookForm
 
 
 class BookListView(LoginRequiredMixin, ListView):
@@ -17,12 +18,12 @@ class BookDetailView(LoginRequiredMixin, DetailView):
 
 class BookCreateView(LoginRequiredMixin, CreateView):
     model = Book
-    fields = '__all__'
+    form_class = BookForm
 
 
 class BookUpdateView(LoginRequiredMixin, UpdateView):
     model = Book
-    fields = '__all__'
+    form_class = BookForm
 
 
 class BookDeleteView(LoginRequiredMixin, DeleteView):

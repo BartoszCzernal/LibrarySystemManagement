@@ -11,7 +11,9 @@
                     {% else %}
                     Update
                     {% endif %} Book</legend>
+                {{ form.media }}
                 {{ form|crispy }}
+                 <script type="text/javascript" src="{% url 'jsi18n' %}"></script>
             </fieldset>
             <div class="form-group">
                 <button class="btn btn-outline-info" type="submit">
