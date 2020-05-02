@@ -33,6 +33,7 @@ class Book(models.Model):
     # on_loan_to : ForeignKey Client
     # owned_by : ForeignKey Library
 
+
     def __repr__(self):
         return "Book(isbn='{}', title='{}')".format(self.isbn, self.title)
 
