@@ -39,3 +39,5 @@ class AuthorDetailView(LoginRequiredMixin, DetailView):
 class AuthorDeleteView(LoginRequiredMixin, DeleteView):
     model = Author
     success_url = '/'
+
+

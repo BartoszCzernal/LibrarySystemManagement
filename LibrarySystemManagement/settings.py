@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'users',
     'isbn_field',
     'crispy_forms',
+    'clients',
 ]
 
 MIDDLEWARE = [
