@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Book
+from .models import Book, Author
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .forms import BookForm
@@ -28,4 +28,14 @@ class BookUpdateView(LoginRequiredMixin, UpdateView):
 
 class BookDeleteView(LoginRequiredMixin, DeleteView):
     model = Book
+    success_url = '/'
+
+
+class AuthorDetailView(LoginRequiredMixin, DetailView):
+    model = Author
+    context_object_name = 'author'
+
+
+class AuthorDeleteView(LoginRequiredMixin, DeleteView):
+    model = Author
     success_url = '/'

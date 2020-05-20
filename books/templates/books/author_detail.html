@@ -1,0 +1,7 @@
+{% extends "books/base.html" %}
+{% block content %}
+<p>{{ author.id }}</p>
+<p>{{ author.first_name }} {{ author.last_name }}</p>
+
+<a class="btn btn-outline-danger" href="{% url 'author-delete' author.id %}">Delete</a>
+{% endblock content %}
